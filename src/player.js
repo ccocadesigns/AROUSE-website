@@ -7,3 +7,7 @@ export function setupCounter(element) {
   element.addEventListener('click', () => setCounter(counter + 1))
   setCounter(0)
 }
+
+// export function pausePlayHandler(){
+//   const btn = document.getElementById()
+// }

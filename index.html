@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css"></link>
     <title>arouse-website</title>
   </head>
   <body>
@@ -12,17 +13,18 @@
     </div>
     <div id="main-content">
       <div id="now-playing-bar">
-        <p>Song title - artist</p>
+        <button id="pause-play-btn">⏸</button>
+        <p id="currently-playing"></p>
+        <button id="vol-btn">Volume</button>
       </div>
       <div id="player-flex">
         <div id="player">
           <p>PLAYER</p>
+          <img id="album-cover-img" />
+          <audio src="https://streaming.live365.com/a05133" id="audio-player"></audio>
         </div>
         <div id="previously-played">
-          <p>1</p>
-          <p>2</p>
-          <p>3</p>
-          <p>4</p>
+          <h3 class="centered-subtitle">Previously Played</h3>
         </div>
       </div>
     </div>
@@ -30,6 +32,6 @@
       <h2>footer</h2>
     </div>
     <!-- <div id="app"></div> -->
-    <script type="module" src="/src/main.js"></script>
+    <script src="/src/main.js"></script>
   </body>
 </html>
