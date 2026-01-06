@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", async() => {
   playState = true
   muteState = false
 
-  audioPlayer.play()
+  // NOTE: Chrome policy doesn't allow for immediate autoplay
+  // audioPlayer.play()
 
   playPauseBtn.onclick = () => {
     if(playState){
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     muteState = !muteState
   }
 
-  setInterval(async() => {
+  async function updateUI() {
     // const rawRes = await fetch("https://api.live365.com/station/a05133")
     const rawRes = await fetch("https://api.live365.com/station/a09646")
     const parsedRes = await rawRes.json()
@@ -59,6 +60,11 @@ document.addEventListener("DOMContentLoaded", async() => {
       currentlyPlayingIndicator.innerHTML = `${current["title"]} - ${parsedRes["current-track"]["artist"]}`
       albumCoverHolder.src = current["art"]
     }
+  } 
 
-  }, 5000)
+  updateUI()
+
+  setInterval(async() => {
+    updateUI()
+  }, 3000)
 })
