@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -93,4 +93,57 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+#navbar {
+  border: 1px solid red;
+  background-color: grey;
+  /* height: 1.5rem; */
+  /* flex-grow: 1; */
+}
+
+#main-content {
+  border: 1px solid blue;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  /* display: flex; */
+  /* flex-grow: 3; */
+}
+
+#now-playing-bar {
+  border: 1px solid red;
+  height: 10%;
+  /* width:  */
+}
+
+#player {
+  width: 50%;
+}
+
+#player-flex {
+  display: flex;
+  height: 90%;
+}
+
+#previously-played {
+  border: 1px solid red;
+  width: 50%;
+  /* height: 100%; */
+  overflow: scroll;
+}
+
+#footer {
+  border: 1px solid yellow;
+  /* height: 1.5rem; */
+  /* flex-grow: 1; */
+}
+
+html, body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
 }
