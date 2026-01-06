@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   // NOTE: Chrome policy doesn't allow for immediate autoplay
   // audioPlayer.play()
 
-  playPauseBtn.onclick = () => {
+  function playPauseToggle(){
     if(playState){
       playPauseBtn.innerHTML = "▶"
       audioPlayer.pause()
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     playState = !playState
   }
 
-  volBtn.onclick = () => {
+  function muteToggle(){
     if(!muteState){
       volBtn.innerHTML = "🔇"
       audioPlayer.muted = true
@@ -35,6 +35,24 @@ document.addEventListener("DOMContentLoaded", async() => {
       audioPlayer.muted = false
     }
     muteState = !muteState
+  }
+
+  document.addEventListener("keypress", (e) => {
+    if(e.key === "k"){
+      playPauseToggle()
+    }
+
+    if(e.key === "m"){
+      muteToggle()
+    }
+  })
+
+  playPauseBtn.onclick = () => {
+    playPauseToggle() 
+  }
+
+  volBtn.onclick = () => {
+    muteToggle()
   }
 
   async function updateUI() {
