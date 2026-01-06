@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", async() => {
   const recentlyPlayedBox = document.getElementById("previously-played")
 
   playState = true
+  muteState = false
+
+  audioPlayer.play()
 
   playPauseBtn.onclick = () => {
     if(playState){
@@ -20,6 +23,17 @@ document.addEventListener("DOMContentLoaded", async() => {
       audioPlayer.play()
     }
     playState = !playState
+  }
+
+  volBtn.onclick = () => {
+    if(!muteState){
+      volBtn.innerHTML = "🔇"
+      audioPlayer.muted = true
+    } else {
+      volBtn.innerHTML = "🔊"
+      audioPlayer.muted = false
+    }
+    muteState = !muteState
   }
 
   setInterval(async() => {
