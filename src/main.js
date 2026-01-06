@@ -38,14 +38,24 @@ document.addEventListener("DOMContentLoaded", async() => {
   }
 
   async function updateUI() {
-    // const rawRes = await fetch("https://api.live365.com/station/a05133")
-    const rawRes = await fetch("https://api.live365.com/station/a09646")
-    const parsedRes = await rawRes.json()
+    let parsedRes = null
     
+    try{
+      // This is the actual AROUSE endpoint, the other one is just for testing purposes
+      // const rawRes = await fetch("https://api.live365.com/station/a05133") 
+      const rawRes = await fetch("https://api.live365.com/station/a09646")
+      parsedRes = await rawRes.json()
+    } catch{
+      // Retry on next setInterval call
+      console.error("Live365 API query failed!")
+      recentlyPlayedBox.innerHTML = ""
+      currentlyPlayingIndicator = "Connecting to station..."
+      return
+    }
+    
+    // List out all the recently played tracks
     const recentlyPlayed = parsedRes["last-played"] 
-
     recentlyPlayedBox.innerHTML = ""
-
     recentlyPlayed.forEach(element => {
       let d = new Date(element["start"])
       recentlyPlayedBox.innerHTML += `
@@ -53,6 +63,7 @@ document.addEventListener("DOMContentLoaded", async() => {
       `
     })
 
+    // Current track and album art renders
     if(parsedRes["is_playing"] === false) {
       currentlyPlayingIndicator.innerHTML = "Station offline..."
     } else {
@@ -65,6 +76,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   updateUI()
 
   setInterval(async() => {
+    // Check for UI updates every 3 seconds
     updateUI()
   }, 3000)
 })
