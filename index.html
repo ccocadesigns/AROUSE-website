@@ -5,6 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/style.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Player</title>
   </head>
   <body>
@@ -13,20 +16,22 @@
     </div>
     <div id="main-content">
       <div id="now-playing-bar">
-        <button id="pause-play-btn">⏸</button>
-        <p id="currently-playing"></p>
-        <button id="vol-btn">🔊</button>
+        <button id="pause-play-btn" class="ctrl-btn">⏸</button>
+        <h5 id="currently-playing"></h5>
+        <button id="vol-btn" class="ctrl-btn">🔊</button>
       </div>
       <div id="player-flex">
         <div id="player">
-          <p>PLAYER</p>
           <img id="album-cover-img" alt="album cover"/>
           <!-- REMEMBER TO CHANGE THE URL -->
           <!-- <audio src="https://streaming.live365.com/a05133" id="audio-player"></audio> -->
           <audio src="https://streaming.live365.com/a09646" id="audio-player"></audio>
         </div>
         <div id="previously-played">
-          <h3 class="centered-subtitle">Previously Played</h3>
+          <h3 class="centered-subtitle" id="previously-played-title">Previously Played</h3>
+          <div id="previously-played-listing">
+
+          </div>
         </div>
       </div>
     </div>

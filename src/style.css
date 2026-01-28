@@ -95,6 +95,10 @@ button:focus-visible {
   }
 } */
 
+* {
+  font-family: 'Inter', sans-serif;
+}
+
 #navbar {
   border: 1px solid red;
   background-color: grey;
@@ -103,41 +107,22 @@ button:focus-visible {
 }
 
 #main-content {
-  border: 1px solid blue;
   flex: 1;
   height: 100%;
   width: 100%;
-  /* display: flex; */
-  /* flex-grow: 3; */
 }
 
 #now-playing-bar {
-  border: 1px solid red;
-  height: 10%;
+  height: 5%;
   display: flex;
   justify-content: space-between;
-  /* width:  */
-}
-
-#player {
-  width: 50%;
-}
-
-#player-flex {
-  display: flex;
-  height: 90%;
-}
-
-#previously-played {
-  border: 1px solid red;
-  width: 50%;
-  /* height: 100%; */
-  overflow: scroll;
+  background-color: black;
+  color: azure;
 }
 
 .centered-subtitle {
   text-align: center;
-
+  margin: 0;
 }
 
 #footer {
@@ -145,9 +130,6 @@ button:focus-visible {
   background-color: grey;
 }
 
-#album-cover-img {
-  width: 30rem;
-}
 
 html, body {
   margin: 0;
@@ -156,4 +138,76 @@ html, body {
   height: 100%;
   width: 100%;
   justify-content: space-between;
+  overflow: hidden;
+}
+
+#previously-played{
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+}
+
+/* 
+#player {
+  background-color: black;
+} */
+
+.ctrl-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+#currently-playing {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#previously-played-title {
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+}
+
+/* Mobile friendly */
+@media (width <= 960px){
+  #album-cover-img {
+    width: 20rem;
+  }
+
+  #player {
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem;
+  }
+
+  #previously-played-listing{
+    text-align: center;
+  }
+}
+
+@media (width > 960px){
+  #album-cover-img {
+    width: 35rem;
+  }
+
+  #previously-played {
+    width: 35%;
+    overflow-y: scroll;
+  }
+
+  #player-flex {
+    display: flex;
+    height: 95%;
+  }
+
+  #player {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

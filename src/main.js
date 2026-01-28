@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   const albumCoverHolder = document.getElementById("album-cover-img")
 
   const currentlyPlayingIndicator = document.getElementById("currently-playing")
-  const recentlyPlayedBox = document.getElementById("previously-played")
+  const recentlyPlayedBox = document.getElementById("previously-played-listing")
 
   playState = true
   muteState = false
