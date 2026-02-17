@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -92,5 +92,157 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+} */
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+#navbar {
+  border: 1px solid red;
+  background-color: grey;
+  /* height: 1.5rem; */
+  /* flex-grow: 1; */
+}
+
+#main-content {
+  flex: 1;
+  /* height: 100%; */
+  width: 100%;
+}
+
+#now-playing-bar {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: azure;
+}
+
+.centered-subtitle {
+  text-align: center;
+  margin: 0;
+}
+
+#footer {
+  border: 1px solid yellow;
+  background-color: grey;
+}
+
+
+html, body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+#previously-played{
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+}
+
+/* 
+#player {
+  background-color: black;
+} */
+
+.ctrl-btn {
+  border: solid 1px black;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+}
+
+#vol-slider {
+  accent-color: black;
+}
+
+#pause-play-btn{
+  font-size: 16px;
+  margin-right: 2rem;
+}
+
+#currently-playing {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#previously-played-title {
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+}
+
+/* Mobile friendly */
+@media (width <= 960px){
+  #album-cover-img {
+    width: 20rem;
+  }
+
+  #player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem;
+  }
+
+  #previously-played-listing{
+    text-align: center;
+  }
+
+  #media-controls {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+
+  body{
+    overflow-y: scroll;
+  }
+}
+
+@media (width > 960px){
+  #album-cover-img {
+    width: 30rem;
+  }
+
+  #previously-played {
+    width: 35%;
+    overflow-y: scroll;
+  }
+
+  #player-flex {
+    display: flex;
+    height: 95%;
+  }
+
+  #player {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #media-controls {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
   }
 }

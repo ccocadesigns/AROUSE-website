@@ -1,24 +1,100 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+document.addEventListener("DOMContentLoaded", async() => {
+  const playPauseBtn = document.getElementById("pause-play-btn")
+  const volSliderLabel = document.getElementById("vol-slider-label")
+  const volSlider = document.getElementById("vol-slider")
+  // const volBtn = document.getElementById("vol-btn")
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+  const audioPlayer = document.getElementById("audio-player")
 
-setupCounter(document.querySelector('#counter'))
+  const albumCoverHolder = document.getElementById("album-cover-img")
+
+  const currentlyPlayingIndicator = document.getElementById("currently-playing")
+  const recentlyPlayedBox = document.getElementById("previously-played-listing")
+
+  playState = true
+  volSliderLabel.innerHTML = `${volSlider.value}%`
+  audioPlayer.volume = volSlider.value / 100
+
+  // NOTE: Chrome policy doesn't allow for immediate autoplay
+  // audioPlayer.play()
+
+  function playPauseToggle(){
+    if(playState){
+      playPauseBtn.innerHTML = "▶"
+      audioPlayer.pause()
+    } else {
+      playPauseBtn.innerHTML = "⏸"
+      audioPlayer.play()
+    }
+    playState = !playState
+  }
+
+  function muteToggle(){
+    if(!muteState){
+      volBtn.innerHTML = "🔇"
+      audioPlayer.muted = true
+    } else {
+      volBtn.innerHTML = "🔊"
+      audioPlayer.muted = false
+    }
+    muteState = !muteState
+  }
+
+  document.addEventListener("keypress", (e) => {
+    if(e.key === "k"){
+      playPauseToggle()
+    }
+  })
+
+  document.addEventListener("input", () => {
+    volSliderLabel.innerHTML = `${volSlider.value}%`
+    audioPlayer.volume = volSlider.value / 100
+  })
+
+  playPauseBtn.onclick = () => {
+    playPauseToggle() 
+  }
+
+  async function updateUI() {
+    let parsedRes = null
+    
+    try{
+      // This is the actual AROUSE endpoint, the other one is just for testing purposes
+      // const rawRes = await fetch("https://api.live365.com/station/a05133") 
+      const rawRes = await fetch("https://api.live365.com/station/a09646")
+      parsedRes = await rawRes.json()
+    } catch{
+      // Retry on next setInterval call
+      console.error("Live365 API query failed!")
+      recentlyPlayedBox.innerHTML = ""
+      currentlyPlayingIndicator = "Connecting to station..."
+      return
+    }
+    
+    // List out all the recently played tracks
+    const recentlyPlayed = parsedRes["last-played"] 
+    recentlyPlayedBox.innerHTML = ""
+    recentlyPlayed.forEach(element => {
+      let d = new Date(element["start"])
+      recentlyPlayedBox.innerHTML += `
+        <p>[${d.toLocaleTimeString("en-US", {hour:"2-digit", minute:"2-digit"})}] ${element["title"]} - ${element["artist"]}</p>
+      `
+    })
+
+    // Current track and album art renders
+    if(parsedRes["is_playing"] === false) {
+      currentlyPlayingIndicator.innerHTML = "Station offline..."
+    } else {
+      let current = parsedRes["current-track"]
+      currentlyPlayingIndicator.innerHTML = `${current["title"]} - ${parsedRes["current-track"]["artist"]}`
+      albumCoverHolder.src = current["art"]
+    }
+  } 
+
+  updateUI()
+
+  setInterval(async() => {
+    // Check for UI updates every 3 seconds
+    updateUI()
+  }, 3000)
+})
