@@ -6,3 +6,59 @@ h1 {
   font-weight: 700;
   line-height: 26.04px;
 }
+
+h2 {
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26.04px;
+}
+
+h3 {
+  color: #000000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  line-height: 26.04px;
+}
+
+.big-container {
+  width: 75%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meetings-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right-meeting {
+  text-align: left;
+}
+
+.article-picture {
+  width: 27%;
+  height: auto;
+}
+
+.date-text {
+  color: #636363;
+}
+
+.author-text {
+  color: #FF0505C7;
+}
+
+.article-separator {
+  width: 25%;
+}
+
+.articles-grid {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,38 +1,62 @@
 // Helper functions
-const Header = (title) => `<h1 class="section-header">${title}</h1>`;
-const SpecialTitle = (text) => `<h1 class="special-title">${text}</h1>`;
-const Meetings = () => `
+const Header = (title) => `<h1 class="section-header">${title}</h1> <hr>`;
+const SpecialTitle = (text) => `<h1 class="special-title">${text}</h1> <hr>`;
+const GenBodyMeeting = (date, time, location) => `
   <div class="meetings-container">
-    <p>Upcoming Meetings and Schedules go here.</p>
+  <div class="left-meeting">
+    <h2>General Body:</h2>
+    <h3>${date}</h3>
+    <h3>${time}</h3>
+    <h3>${location}</h3>
   </div>
 `;
-const Articles = () => `
-  <article class="articles-grid">
-    <p>Article snippets and content cards...</p>
-  </article>
+
+const MagBoardMeeting = (date, time, location) => `
+  <div class="right-meeting">
+    <h2>Magazine Board:</h2>
+    <h3>${date}</h3>
+    <h3>${time}</h3>
+    <h3>${location}</h3>
+  </div>
+  </div>
+`;
+
+const Article = (imageURL, date, author, title) => `
+  <div class="article">
+    <img class="article-picture" src="${imageURL}">
+    <p class="date-text"> ${date} </p>
+    <p class="author-text"> ${author} </p>
+    <hr class="article-separator">
+    <h3> ${title} </h3>
+  </div>
 `;
 
 // Main home component
 export const Home = () => {
   return `
     <div class="big-container">
-      ${Header("Main Header")}
-      ${Meetings()}
+      ${Header("Next meeting details")}
+      ${GenBodyMeeting("12/02/2025", "7:30 PM", "Enarson 254")}
+      ${MagBoardMeeting("12/02/2025", "7:30 PM", "Enarson 254")}
       
-      ${Header("Resources")}
-      ${Articles()}
+      ${Header("Futured Articles")}
+      <div class="articles-grid">
+      ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
+      ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
+      ${Article("/matt-maltese.png", "December 5th, 2025", "Placeholder Author", "Everyone Adores Matt Maltese (At Least I Do)")}
+      </div>
       
-      ${SpecialTitle("Featured Insights")}
-      ${Articles()}
+      ${SpecialTitle("COLUMNS")}
+      ${Article()}
       
-      ${SpecialTitle("Community News")}
-      ${Articles()}
+      ${SpecialTitle("CULTURE")}
+      ${Article()}
       
-      ${SpecialTitle("Archive")}
-      ${Articles()}
+      ${SpecialTitle("MUSIC")}
+      ${Article()}
       
-      ${SpecialTitle("Final Thoughts")}
-      ${Articles()}
+      ${SpecialTitle("CAMPUS")}
+      ${Article()}
     </div>
   `;
 };
