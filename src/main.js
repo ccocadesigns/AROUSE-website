@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", async() => {
   const playPauseBtn = document.getElementById("pause-play-btn")
-  const volBtn = document.getElementById("vol-btn")
+  const volSliderLabel = document.getElementById("vol-slider-label")
+  const volSlider = document.getElementById("vol-slider")
+  // const volBtn = document.getElementById("vol-btn")
 
   const audioPlayer = document.getElementById("audio-player")
 
@@ -10,7 +12,8 @@ document.addEventListener("DOMContentLoaded", async() => {
   const recentlyPlayedBox = document.getElementById("previously-played-listing")
 
   playState = true
-  muteState = false
+  volSliderLabel.innerHTML = `${volSlider.value}%`
+  audioPlayer.volume = volSlider.value / 100
 
   // NOTE: Chrome policy doesn't allow for immediate autoplay
   // audioPlayer.play()
@@ -41,18 +44,15 @@ document.addEventListener("DOMContentLoaded", async() => {
     if(e.key === "k"){
       playPauseToggle()
     }
+  })
 
-    if(e.key === "m"){
-      muteToggle()
-    }
+  document.addEventListener("input", () => {
+    volSliderLabel.innerHTML = `${volSlider.value}%`
+    audioPlayer.volume = volSlider.value / 100
   })
 
   playPauseBtn.onclick = () => {
     playPauseToggle() 
-  }
-
-  volBtn.onclick = () => {
-    muteToggle()
   }
 
   async function updateUI() {
