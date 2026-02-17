@@ -2,7 +2,12 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
+import { Home } from './Home.js'
 
+const app = document.querySelector('#app');
+app.innerHTML = Home();
+
+/*
 document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -22,3 +27,4 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+*/
