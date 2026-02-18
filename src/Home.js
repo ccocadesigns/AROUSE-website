@@ -1,5 +1,5 @@
 // Helper functions
-const Header = (title) => `<h1 class="section-header">${title}</h1> <hr>`;
+const Header = (title) => `<h1 class="section-header">${title}</h1> <hr class="red-separator">`;
 const SpecialTitle = (text) => `<h1 class="special-title">${text}</h1> <hr>`;
 const GenBodyMeeting = (date, time, location) => `
   <div class="meetings-container">
@@ -39,7 +39,7 @@ export const Home = () => {
       ${GenBodyMeeting("12/02/2025", "7:30 PM", "Enarson 254")}
       ${MagBoardMeeting("12/02/2025", "7:30 PM", "Enarson 254")}
       
-      ${Header("Futured Articles")}
+      ${Header("Featured Articles")}
       <div class="articles-grid">
       ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
       ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
@@ -47,16 +47,32 @@ export const Home = () => {
       </div>
       
       ${SpecialTitle("COLUMNS")}
-      ${Article()}
+      <div class="articles-grid">
+      ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
+      ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
+      ${Article("/matt-maltese.png", "December 5th, 2025", "Placeholder Author", "Everyone Adores Matt Maltese (At Least I Do)")}
+      </div>
       
       ${SpecialTitle("CULTURE")}
-      ${Article()}
+      <div class="articles-grid">
+      ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
+      ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
+      ${Article("/matt-maltese.png", "December 5th, 2025", "Placeholder Author", "Everyone Adores Matt Maltese (At Least I Do)")}
+      </div>
       
       ${SpecialTitle("MUSIC")}
-      ${Article()}
+      <div class="articles-grid">
+      ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
+      ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
+      ${Article("/matt-maltese.png", "December 5th, 2025", "Placeholder Author", "Everyone Adores Matt Maltese (At Least I Do)")}
+      </div>
       
       ${SpecialTitle("CAMPUS")}
-      ${Article()}
+      <div class="articles-grid">
+      ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
+      ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
+      ${Article("/matt-maltese.png", "December 5th, 2025", "Placeholder Author", "Everyone Adores Matt Maltese (At Least I Do)")}
+      </div>
     </div>
   `;
 };

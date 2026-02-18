@@ -1,3 +1,4 @@
+/* MAIN ELEMENTS */
 h1 {
   color: #000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,10 +20,23 @@ h2 {
 h3 {
   color: #000000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-style: normal;
   line-height: 26.04px;
 }
+
+hr {
+  height: 3px;
+  background: #000000;
+  margin-bottom: 13px;
+  border:0px;
+}
+
+.red-separator {
+  filter: drop-shadow(0px 2px 0px #FF0505C7);
+}
+
+/* ENTIRE PAGE */
 
 .big-container {
   width: 75%;
@@ -31,6 +45,7 @@ h3 {
   margin-right: auto;
 }
 
+/* MEETINGS (TOP) */
 .meetings-container {
   display: flex;
   flex-direction: row;
@@ -41,24 +56,31 @@ h3 {
   text-align: left;
 }
 
+/* ARTICLE SECTIONS */
+
 .article-picture {
-  width: 27%;
-  height: auto;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .date-text {
   color: #636363;
+  margin-top: 0px;
+  margin-bottom:0px;
 }
 
 .author-text {
   color: #FF0505C7;
-}
-
-.article-separator {
-  width: 25%;
+  margin-top: 0px;
 }
 
 .articles-grid {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.article {
+  width: 100%;
 }
