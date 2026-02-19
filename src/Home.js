@@ -1,6 +1,6 @@
 // Helper functions
 const Header = (title) => `<h1 class="section-header">${title}</h1> <hr class="red-separator">`;
-const SpecialTitle = (text) => `<h1 class="special-title">${text}</h1> <hr>`;
+const RedLetter = (letter, title) => `<h1><span class="red-letter">${letter}</span>${title}</h1> <hr class="red-separator">`;
 const GenBodyMeeting = (date, time, location) => `
   <div class="meetings-container">
   <div class="left-meeting">
@@ -46,28 +46,28 @@ export const Home = () => {
       ${Article("/matt-maltese.png", "December 5th, 2025", "Placeholder Author", "Everyone Adores Matt Maltese (At Least I Do)")}
       </div>
       
-      ${SpecialTitle("COLUMNS")}
+      ${RedLetter("C", "OLUMNS")}
       <div class="articles-grid">
       ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
       ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
       ${Article("/matt-maltese.png", "December 5th, 2025", "Placeholder Author", "Everyone Adores Matt Maltese (At Least I Do)")}
       </div>
       
-      ${SpecialTitle("CULTURE")}
+      ${RedLetter("C", "ULTURE")}
       <div class="articles-grid">
       ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
       ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
       ${Article("/matt-maltese.png", "December 5th, 2025", "Placeholder Author", "Everyone Adores Matt Maltese (At Least I Do)")}
       </div>
       
-      ${SpecialTitle("MUSIC")}
+      ${RedLetter("M", "USIC")}
       <div class="articles-grid">
       ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
       ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
       ${Article("/matt-maltese.png", "December 5th, 2025", "Placeholder Author", "Everyone Adores Matt Maltese (At Least I Do)")}
       </div>
       
-      ${SpecialTitle("CAMPUS")}
+      ${RedLetter("C", "AMPUS")}
       <div class="articles-grid">
       ${Article("/life-of-a-showgirl.png", "December 5th, 2025", "Placeholder Author", "The Life of a Showgirl should be a victory lap; instead it falls flat")}
       ${Article("/tame-impala-deadbeat.png", "December 5th, 2025", "Placeholder Author", "Tame Impala – Deadbeat")}
