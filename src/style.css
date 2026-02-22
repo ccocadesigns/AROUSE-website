@@ -13,84 +13,336 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction:column;
+  background-color: white;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#heading{
+.header-container {
+display:flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 200px;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.header-img {
+  width: 400px;
+  height: auto;
+}
+}
+
+
+
+#show-heading{
+.show-header-container {
+display:flex;
+flex-direction: column;
+align-items: flex-start;
+margin-left: 235px;
+}
+
+.show-header-img {
+  width: 315px;
+  height: auto;
+  margin-bottom:12px;
+}
+
+.line-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* keeps both centered */
+}
+
+.black-line {
+  width: 953px;   
+  height: 2px;    
+  background: #111111;
+
+}
+.red-line {
+  width: 953px;   
+  height: 1px;    
+  background: #FF0505;
+}
+}
+
+#shows-subheading{
+.shows-subheading-container {
+  display:flex;
+  color: black; 
+  flex-direction: row; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 235px;
+
+}
+
+.show-column{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content: space-between;
+
+
+width: 405px;
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 24px;
+margin-bottom: 150px;
+}
+
+.or-column{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content: space-between;
+margin-left: 50px;
+
+width: 100px;
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 24px;
+}
+/* button for "click here" and "contact us"*/
+.button{
+background-color: #000000;
+color: #ffffff;
+font-family: 'Inter', sans-serif;
+font-weight: 500;
+font-size: 16px;
+border-radius: 0;
+height:35px;
+width:98px;
+cursor: pointer;
+text-align: center;
+border-radius: 0;
+margin-left: 6px; 
+
+display: flex;             
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+.button:hover {
+  background-color: #333333
+  ; /* hover effect */
+}
+}
+
+#shows-body{/* body of shows starts here --------------------------------------*/
+.days{
+  display:flex;
+  color: black; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin-left: 235px;
+  font-size: 50px;
+  font-weight: bold;
+  gap: 20px; 
+}
+
+.show-heading{
+  display:flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 77%;
+  margin-bottom: -15px;
+}
+
+/*view more button*/
+.button{
+color: #FF0505C7;
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+font-size: 16.8px;
+height:18px;
+width:109px;
+cursor: pointer;
+text-align: center; 
+
+display: flex;             
+text-align: center;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+}
+
+a {/* gets rid of blue hue on the archive link*/
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.line-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* keeps both centered */
+}
+
+.black-line {
+  width: 953px;   
+  height: 2px;    
+  background: #111111;
+}
+.red-line {
+  width: 953px;   
+  height: 1px;    
+  background: #FF0505;
+}
+
+.days > div p {
+  margin: 0; /* remove default margin */
+}
+
+.shows-row{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.shows-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:238px;
+  height:271px;
+  margin-top: 20px;
+
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+ /* extra show container, one for each day of the week
+ these are revealed when you click "view more"*/
+.sun-more-shows-container{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  width:238px;
+  height:271px;
+  margin-top: 20px;
+
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.mon-more-shows-container{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  width:238px;
+  height:271px;
+  margin-top: 20px;
+
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.tue-more-shows-container{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  width:238px;
+  height:271px;
+  margin-top: 20px;
+
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.wed-more-shows-container{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  width:238px;
+  height:271px;
+  margin-top: 20px;
+
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.thu-more-shows-container{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  width:238px;
+  height:271px;
+  margin-top: 20px;
+
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.fri-more-shows-container{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  width:238px;
+  height:271px;
+  margin-top: 20px;
+
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.sat-more-shows-container{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  width:238px;
+  height:271px;
+  margin-top: 20px;
+
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+.show-cover-img{
+  width: 200px;
+  height: auto;
+
+}
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.black-line2 {
+  width: 200px;   
+  height: 3px;    
+  background: #111111;
+}
+
+.show-name{
+  font-family: 'Inter', sans-serif;
+  color: black;
+  font-size: 24px;
+  max-width:200px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* for footer
+this does nothing rn, just provides space at the bottom*/
+.footer-container{
+  display:flex;
+  width: 100%;
+  height: 400px;
 }

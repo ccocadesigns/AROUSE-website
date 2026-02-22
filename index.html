@@ -1,13 +1,725 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    
+    <link rel="stylesheet" href="src/style.css">
+    <img src="javascript.svg">
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>arouse-website</title>
+    <title>Arouse Website</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> <!--font-->
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+
+    <!-- main JS script -->
+   <script type="module" src="/src/main.js"></script>
+
+   <!-- AROUSE header-->
+  <div id="heading">
+    <div class="header-container">
+      <img src="/src/assets/DARK_FULL_LENGTH.png" alt="Website Header" class="header-img">
+    </div>    
+  </div> 
+
+  <!-- special shows header-->
+  <div id="show-heading">
+    <div class="show-header-container">
+      <img src="/src/assets/shows.png" alt="Shows Header" class="show-header-img">
+      <div class=line-divider>
+          <div class="black-line"></div>
+          <div class="red-line"></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  </div>
+<!-- sub heading with buttons, Contact us button does nothing rn, waiting to be given the link for that-->
+  <div id="shows-subheading">
+  <div class=shows-subheading-container>
+    <div class="show-column">
+    <p>Want to host your own show next semester?</p>
+    
+    <div class=button id="contact-us-shows">Contact Us</div>
+    </div>
+
+    <div class="or-column">
+    <p>or</p>
+    </div>
+
+    <div class="show-column">
+      
+    <p>Access weekly show archives.</p>
+    <a href="http://arouseosu.com/arouse-archives/" class="button" id="archive-shows">
+      Click Here
+    </a>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- SUNDAY  ---------------------------------------------------------------------------->
+   <!-- each day has a "shows-row" which is shown normally and another "shows row" for the ones that
+    appear when you click "view more". shows can be edited, added, and adjusted right here -->
+   <div id="shows-body">
+    <div class=days>
+      <div class=show-heading>
+        <p>Sunday</p>
+        <div class=button id="sun-view-more">View More?</div>
+      </div>
+      <div class=line-divider>
+        <div class="black-line"></div>
+        <div class="red-line"></div>
+      </div>
+
+
+      <div class="shows-row">
+      <!-- show 1-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      <!-- show 2-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 3-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 4-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- view more shows-->
+      <div class="shows-row">
+       <!-- show 5-->
+      <div class="sun-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The five</p>
+      </div>
+      </div>
+
+      <!-- show 6-->
+      <div class="sun-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The six</p>
+      </div>
+      </div>
+
+      <!-- show 7-->
+      <div class="sun-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The seven</p>
+      </div>
+      </div>
+
+      <!-- show 8-->
+      <div class="sun-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The eight</p>
+      </div>
+      </div>
+      </div>
+
+      <div class="shows-row">
+       <!-- show 9-->
+      <div class="sun-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The nine</p>
+      </div>
+      </div>
+
+      <!-- show 10-->
+      <div class="sun-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The ten</p>
+      </div>
+      </div>
+
+      <!-- show 11-->
+      <div class="sun-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The eleven</p>
+      </div>
+      </div>
+
+      <!-- show 12-->
+      <div class="sun-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The twelve</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- MONDAY --------------------------------------------------------------------------------------->
+      <div class="show-heading">
+        <p>Monday</p>
+        <div class=button id="mon-view-more">View More?</div>
+      </div>
+        <div class=line-divider>
+          <div class="black-line"></div>
+          <div class="red-line"></div>
+      </div>
+
+
+      <div class="shows-row">
+      <!-- show 1-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The leo show</p>
+      </div>
+      </div>
+      <!-- show 2-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 3-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 4-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- view more shows-->
+      <div class="shows-row">
+       <!-- show 5-->
+      <div class="mon-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The five</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- TUESDAY ----------------------------------------------------------------------------------->
+      <div class="show-heading">
+        <p>Tuesday</p>
+        <div class=button id="tue-view-more">View More?</div>
+      </div>
+
+      <div class=line-divider>
+        <div class="black-line"></div>
+        <div class="red-line"></div>
+      </div>
+ 
+
+      <div class="shows-row">
+      <!-- show 1-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      <!-- show 2-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 3-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 4-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- view more shows-->
+      <div class="shows-row">
+       <!-- show 5-->
+      <div class="tue-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The five</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- WEDNESDAY ---------------------------------------------------------------------------------------->
+      <div class="show-heading">
+        <p>Wednesday</p>
+        <div class=button id="wed-view-more">View More?</div>
+      </div>
+      <div class=line-divider>
+        <div class="black-line"></div>
+        <div class="red-line"></div>
+      </div>
+
+
+      <div class="shows-row">
+      <!-- show 1-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      <!-- show 2-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 3-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 4-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      </div>
+      <!-- view more shows-->
+      <div class="shows-row">
+       <!-- show 5-->
+      <div class="wed-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The five</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- THURSDAY --------------------------------------------------------------------------------------->
+      <div class=show-heading>
+        <p>Thursday</p>
+        <div class=button id="thu-view-more">View More?</div>
+      </div>
+      <div class=line-divider>
+        <div class="black-line"></div>
+        <div class="red-line"></div>
+      </div>
+
+
+      <div class="shows-row">
+      <!-- show 1-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      <!-- show 2-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 3-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 4-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      </div>
+      <!-- view more shows-->
+      <div class="shows-row">
+       <!-- show 5-->
+      <div class="thu-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The five</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- FRIDAY ------------------------------------------------------------------------------------------>
+      <div class=show-heading>
+        <p>Friday</p>
+        <div class=button id="fri-view-more">View More?</div>
+      </div>
+      <div class=line-divider>
+        <div class="black-line"></div>
+        <div class="red-line"></div>
+      </div>
+
+
+      <div class="shows-row">
+      <!-- show 1-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      <!-- show 2-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 3-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 4-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- view more shows-->
+      <div class="shows-row">
+       <!-- show 5-->
+      <div class="fri-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The five</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- SATURDAY --------------------------------------------------------------------------------------->
+      <div class=show-heading>
+        <p>Saturday</p>
+        <div class=button id="sat-view-more">View More?</div>
+      </div>
+      <div class=line-divider>
+        <div class="black-line"></div>
+        <div class="red-line"></div>
+      </div>
+
+
+      <div class="shows-row">
+      <!-- show 1-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      <!-- show 2-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 3-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+
+      <!-- show 4-->
+      <div class="shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The Sunday Scaries</p>
+      </div>
+      </div>
+      </div>
+
+      <!-- view more shows-->
+      <div class="shows-row">
+       <!-- show 5-->
+      <div class="sat-more-shows-container">
+      <img src="/src/assets/daftpunk.jpg" alt="Show cover" class="show-cover-img">
+      <p> Aired at 11 AM</p>
+      <div class=divider>
+        <div class="black-line2"></div>
+      </div>
+
+      <div class="show-name">
+      <p> The five</p>
+      </div>
+      </div>
+      </div>
+      
+
+      </div><!-- ends shows-body id-->
+
+      <div class="footer-container"></div> <!-- adds space for footer-->
+
+      <script type="module" src="/src/main.js"></script> <!-- makes it load first-->
   </body>
 </html>
