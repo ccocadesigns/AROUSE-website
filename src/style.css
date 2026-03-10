@@ -246,3 +246,63 @@ html, body {
     justify-content: center;
   }
 }
+
+/* ------ MINI PLAYER STYLING ------ */
+svg {
+  align-self: center;
+  animation: fade 2s linear infinite;
+}
+
+@keyframes fade {
+  0%,100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+#dot-with-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#mini-player-content {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 30%;
+  height: 7.5%;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#currently-playing-mini {
+  align-self: center;
+}
+
+#volume-slider-wrapper {
+  align-self: center;
+}
+
+#vol-slider-label-mini {
+  margin-bottom: 0;
+}
+
+#pause-play-btn-mini {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: black;
+  align-self: center;
+  padding-top: 11px;
+}
