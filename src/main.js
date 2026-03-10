@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", async() => {
     
     try{
       // This is the actual AROUSE endpoint, the other one is just for testing purposes
-      // const rawRes = await fetch("https://api.live365.com/station/a05133") 
-      const rawRes = await fetch("https://api.live365.com/station/a09646")
+      const rawRes = await fetch("https://api.live365.com/station/a05133") 
+      // const rawRes = await fetch("https://api.live365.com/station/a09646")
       parsedRes = await rawRes.json()
     } catch{
       // Retry on next setInterval call
